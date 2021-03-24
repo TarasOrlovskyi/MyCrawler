@@ -1,4 +1,5 @@
 # Default ignored files
 /.idea
+target/
 MyCrawler.iml
 crawler_recursion.txt

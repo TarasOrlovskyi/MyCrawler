@@ -64,12 +64,11 @@ public class Vinyl {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Vinyl vinyl = (Vinyl) o;
-        return release.equals(vinyl.release) &&
-                artist.equals(vinyl.artist) &&
-                price.equals(vinyl.price) &&
-                vinylLink.equals(vinyl.vinylLink) &&
-                imageLink.equals(vinyl.imageLink);
-                //genre.equals(vinyl.genre);
+        return Objects.equals(release, vinyl.release) &&
+                Objects.equals(artist, vinyl.artist) &&
+                Objects.equals(price, vinyl.price) &&
+                Objects.equals(vinylLink, vinyl.vinylLink) &&
+                Objects.equals(imageLink, vinyl.imageLink);
     }
 
     @Override

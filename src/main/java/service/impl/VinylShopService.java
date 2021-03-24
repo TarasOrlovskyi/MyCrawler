@@ -43,7 +43,7 @@ public class VinylShopService implements ShopService {
         Elements pageElements = doc.getElementsByClass("vinyl-release showcase");
         for (Element pageElement : pageElements) {
             String release = pageElement.getElementsByClass("margin-top-clear margin-bot-5").text();
-            //http://vinyl.ua/release/567/various-phatmix-volume-2 - there is problem, because there is no teg <a>, because there is no name Artist
+            //FIXME http://vinyl.ua/release/567/various-phatmix-volume-2 - there is problem, because there is no teg <a>, because there is no name Artist. There is <span>
             String artist = pageElement.getElementsByClass("text-ellipsis").select("a").text();
             String price = pageElement.getElementsByClass("pull-left margin-top-5 showcase-release-price").text();
             String vinylLink = START_LINK + pageElement.getElementsByClass("img-showcase-release").select("a").attr("href");
